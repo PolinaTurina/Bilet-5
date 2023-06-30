@@ -17,7 +17,7 @@ class OtgulForm(forms.ModelForm):
 #форма отказа
 class OtkazForm(forms.Form):
     # prosmotreno = forms.BooleanField()
-    odobreno = forms.BooleanField()
+    odobreno = forms.BooleanField(required=False)
     note = forms.CharField(widget=forms.Textarea, required=False)
     name=forms.CharField(required=False)
  

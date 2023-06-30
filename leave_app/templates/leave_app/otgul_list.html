@@ -8,7 +8,7 @@
 
 
     {%for otgul in otgul_list%}
-    <h3>{{otgul}}</h3>
+    <a href="/leave-app/otkaz/{{otgul.id}}/?is_otpusk=false"><h3>{{otgul}}</h3></a>
 
     <p>ФИО: {{otgul.name}}</p>
     <p>Дата отгула: {{otgul.date}}</p>

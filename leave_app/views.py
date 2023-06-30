@@ -50,7 +50,7 @@ class OtgulCreateView(CreateView):
 
 def otkaz_view(request, app_id):
     if request.method == "POST":
-        if 'is_otpusk' in request.POST and request.POST.get('is_otpusk') == True:
+        if 'is_otpusk' in request.GET and request.GET.get('is_otpusk') == 'True':
             application = Otpusk.objects.get(id=app_id)
             object_type = 'otpusk'
         else:

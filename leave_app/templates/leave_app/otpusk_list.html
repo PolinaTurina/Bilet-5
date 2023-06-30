@@ -9,7 +9,7 @@
 
 
     {%for otpusk in otpusk_list%}
-    <h3>{{otpusk}}</h3>
+    <a href="/leave-app/otkaz/{{otpusk.id}}/?is_otpusk=true"><h3>{{otpusk}}</h3></a>
 
     <p>ФИО: {{otpusk.name}}</p>
     <p>Начало отпуска: {{otpusk.start_date}}</p>
