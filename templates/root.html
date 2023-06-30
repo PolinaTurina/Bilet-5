@@ -8,8 +8,17 @@
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
 </head>
 <body>
-    {% block content%}
 
+    <div>
+        <a class="nav" href="{% url 'leave_app:otpusk_list' %}"> Заявки отпуск</a>
+        <a class="nav" href="{% url 'leave_app:otgul_list' %}"> Заявки отгул</a>
+        <a class="nav" href="{% url 'leave_app:form_create' %}"> Создать заявку(отпуск)</a>
+        <a class="nav" href="{% url 'leave_app:form_create_2' %}"> Создать заявку(отгул)</a>
+
+
+   </div>
+
+    {% block content%}
     {%endblock%}
 </body>
 </html>
