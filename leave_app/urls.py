@@ -9,4 +9,5 @@ urlpatterns = [
     path('otgul/', OtgulListView.as_view()),
     path('create/', OtpuskCreateView.as_view()),
     path('create2/', OtgulCreateView.as_view()),
+    path('otkaz/<int:app_id>/', otkaz_view),
 ]

@@ -16,13 +16,11 @@ class OtgulForm(forms.ModelForm):
 
 #форма отказа
 class OtkazForm(forms.Form):
-    prosmotreno = forms.BooleanField()
+    # prosmotreno = forms.BooleanField()
     odobreno = forms.BooleanField()
-    note = forms.CharField(widget=forms.Textarea)
-    name=forms.CharField(widget=forms.Textarea)
-    class Meta:
-        model = Otgul
-        fields = ['name', 'note']
+    note = forms.CharField(widget=forms.Textarea, required=False)
+    name=forms.CharField(required=False)
+ 
 
 #фильтрация
 class FilterForm(forms.Form):
