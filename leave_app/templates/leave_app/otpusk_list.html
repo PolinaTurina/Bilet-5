@@ -1,0 +1,21 @@
+{% extends 'root.html'%}
+
+{%block content%}
+    {%for otpusk in otpusk_list%}
+    <h3>{{otpusk}}</h3>
+
+    <p>ФИО: {{otpusk.name}}</p>
+    <p>Начало отпуска: {{otpusk.start_date}}</p>
+    <p>Конец отпуска: {{otpusk.end_date}}</p>
+    <p>Примечание: {{otpusk.note}}</p>
+    <p>Просмотрено: {% if otpusk.prosmotreno%} ДА {%else%} НЕТ {%endif%}</p>
+
+    {%if otpusk.otkaz%}   
+        <p>Причина отказа: {{otpusk.otkaz.note}} </p>
+        <p>Подпись: {{otpusk.otkaz.name}} </p>
+    {%elif otpusk.prosmotreno%}
+        <p>Одобрено</p>
+    {%endif%}
+    
+    {%endfor%}
+{%endblock%}
