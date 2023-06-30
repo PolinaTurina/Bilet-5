@@ -1,6 +1,12 @@
 {%extends 'root.html'%}
 
 {%block content%}
+<form action="" method="get">
+    {{filter_form.as_p}}
+    <button type="submit">Найти</button>
+</form>
+
+
     {%for otgul in otgul_list%}
     <h3>{{otgul}}</h3>
 

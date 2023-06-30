@@ -1,6 +1,13 @@
 {% extends 'root.html'%}
 
 {%block content%}
+
+    <form action="" method="get">
+        {{filter_form.as_p}}
+        <button type="submit">Найти</button>
+    </form>
+
+
     {%for otpusk in otpusk_list%}
     <h3>{{otpusk}}</h3>
 
