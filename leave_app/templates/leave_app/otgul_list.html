@@ -1,0 +1,22 @@
+{%extends 'root.html'%}
+
+{%block content%}
+    {%for otgul in otgul_list%}
+    <h3>{{otgul}}</h3>
+
+    <p>ФИО: {{otgul.name}}</p>
+    <p>Дата отгула: {{otgul.date}}</p>
+    <p>Примечание: {{otgul.note}}</p>
+    <p>Просмотрено: {% if otgul.prosmotreno%} ДА {%else%} НЕТ {%endif%}</p>
+
+    {%if otgul.otkaz%}   
+        <p>Причина отказа: {{otgul.otkaz.note}} </p>
+        <p>Подпись: {{otgul.otkaz.name}} </p>
+    {%elif otgul.prosmotreno%}
+        <p>Одобрено</p>
+    {%endif%}
+    
+    <p>Создано: {{otgul.created_date}}</p>
+    <p>Отредактировано: {{otgul.edit_date}}</p>
+    {%endfor%}
+{%endblock%}
