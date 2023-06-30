@@ -35,7 +35,7 @@ class Otpusk(Base):
     class Meta:
         verbose_name = 'Заявка на отпуск'
         verbose_name_plural = 'Заявки на отпуск'
-        ordering = ['created_date', 'edit_date']
+        ordering = ['-created_date', '-edit_date']
 
     def __str__(self):
         return f'Заявка на отпуск № {self.id}'
@@ -47,7 +47,7 @@ class Otgul(Base):
     class Meta:
         verbose_name = 'Заявка на отгул'
         verbose_name_plural = 'Заявки на отгул'
-        ordering = ['created_date', 'edit_date']
+        ordering = ['-created_date', '-edit_date']
 
     def __str__(self):
         return f'Заявка на отгул № {self.id}'
